@@ -10,11 +10,8 @@ class Add extends Component {
             surname: "",
             country: " ",
             owner: " "
-
-
         }
     }
-
 
     handleInput1 = async (e) => {
         let value = e.target.value
@@ -36,7 +33,6 @@ class Add extends Component {
         await this.setState({ owner: value })
     }
 
-
     add = async () => {
         const user = {
             name: this.state.name + " " + this.state.surname,
@@ -48,31 +44,23 @@ class Add extends Component {
             country: this.state.country
         }
 
-
-
-        return axios.post("http://localhost:9988/add", user)
+        return axios.post("/add", user)
             .then(res => { console.log(res.data) })
     }
-
-
 
     render() {
         return (
             <div>
                 <h4>Add Client</h4>
-                <span>Name:    <input value={this.state.name} onChange={this.handleInput1}></input></span>
-                <br></br>
-                <span>Surname: <input value={this.state.surname} onChange={this.handleInput2}></input></span>
-                <br></br>
-                <span>Country: <input value={this.state.country} onChange={this.handleInput3}></input> </span>
-                <br></br>
-                <span>Owner: <input value={this.state.owner} onChange={this.handleInput4}></input> </span>
+                Name: <input value={this.state.name} onChange={this.handleInput1}></input> <br></br>
+                Surname: <input value={this.state.surname} onChange={this.handleInput2}></input> <br></br>
+                Country: <input value={this.state.country} onChange={this.handleInput3}></input> <br></br>
+                Owner: <input value={this.state.owner} onChange={this.handleInput4}></input> <br></br>
                 <br></br>  <button onClick={this.add}>Add New Client</button>
             </div>
         );
     }
 }
-
 
 export default Add;
 

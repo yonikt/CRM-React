@@ -2,15 +2,12 @@ import React, { Component } from 'react';
 const axios = require('axios')
 
 class Update extends Component {
-
     constructor() {
         super()
         this.state = {
             name: "",
             transferTo: "",
             email: ""
-
-
         }
     }
 
@@ -29,9 +26,8 @@ class Update extends Component {
         await this.setState({ email: value })
     }
 
-
     transfer = async () => {
-        return axios.put("http://localhost:9988/transfer", {
+        return axios.put("/transfer", {
             name: this.state.name,
             owner: this.state.transferTo
         })
@@ -44,7 +40,7 @@ class Update extends Component {
     }
 
     email = async () => {
-        return axios.put("http://localhost:9988/email", {
+        return axios.put("/email", {
             name: this.state.name,
             email: this.state.email
         })
@@ -58,7 +54,7 @@ class Update extends Component {
 
 
      sale = async () => {
-        return axios.put("http://localhost:9988/sale", {
+        return axios.put("/sale", {
             name: this.state.name,
             sold: "true"
         })
@@ -75,8 +71,7 @@ class Update extends Component {
         return (
             <div>
                 <h4>Update</h4>
-
-                <span>Client:    <input list="names" placeholder="Client Name" onChange={this.handleInput1} ></input>
+                <span><input list="names" placeholder="Client Name" onChange={this.handleInput1} ></input> <br></br>
                     <datalist id="names">
                         {i.map(i => <option value={i.name}></option>)}
                     </datalist></span> <br></br>
@@ -91,20 +86,12 @@ class Update extends Component {
                     <option value="A"></option><option value="B"></option><option value="C"></option><option value="D"></option>
                 </datalist></span>
                 <button onClick={this.email}>Send</button>
-                <br></br>
-                <span>Declare Sale</span> <button onClick={this.sale}>Declare</button>
-
-
-
-
-
-
-
+                <br></br> <br></br>
+              <button onClick={this.sale}>Declare Sale</button>
                 <hr></hr>
             </div>
         )
     }
 }
-
 
 export default Update;

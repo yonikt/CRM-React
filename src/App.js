@@ -8,32 +8,29 @@ const axios = require('axios')
 
 
 
+
 class App extends Component {
 
   constructor() {
     super()
-    this.state = {
-      users: []
-    }
+    this.state = { users: [] }
   }
 
   async getUsers() {
-    return axios.get("http://localhost:9988/data")
+    return axios.get("/data")
   }
 
   async componentDidMount() {
     const response = await this.getUsers()
     this.setState({ users: response.data })
-    // console.log(this.state.users)
   }
 
-  
+
 
   render() {
     return (
       <Router>
         <div className="App">
-
 
           <ul>
             <li><Link className="active" to="/clients">CLIENTS</Link></li>
@@ -41,11 +38,10 @@ class App extends Component {
             <li> <Link to="/analytics">ANALYTICS</Link></li>
           </ul>
 
-          <Route exact path="/" render={() => <Redirect to="/clients" />} /> 
+          <Route exact path="/" render={() => <Redirect to="/clients" />} />
           <Route exact path="/clients" render={() => <Clients data={this.state.users} />} />
           <Route exact path="/actions" render={() => <Actions users={this.state.users} />} />
           <Route exact path="/analytics" render={() => <Analytics users={this.state.users} />} />
-
 
         </div>
       </Router>

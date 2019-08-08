@@ -8,8 +8,6 @@ class Popup extends Component {
         this.state = {
             country: ""
             // name: ""
-         
-
         }
     }
 
@@ -24,11 +22,9 @@ class Popup extends Component {
     }
 
     update=async() => {
-        return axios.put("http://localhost:9988/update", {
+        return axios.put("/update", {
             name: this.props.text.name,
             country: this.state.country
-
-       
         })
             .then(response => {
                 console.log(response)
@@ -42,19 +38,17 @@ class Popup extends Component {
         return (
             <div className='popup'>
                 <div className='popup_inner'>
-                     <button onClick={this.props.closePopup}>x</button> <br></br>
+                     <button id="exit" onClick={this.props.closePopup}> x </button> <br></br>
                     <span>Name:    <input defaultValue={this.props.text.name.split(" ")[0]} onChange={this.handleName}></input></span>
                     <br></br>
                     <span>Surname: <input defaultValue={this.props.text.name.split(" ")[1]}></input></span>
                     <br></br>
                     <span>Country: <input defaultValue={this.props.text.country} onChange={this.handleInput}></input> </span>
                     <br></br>  <button onClick={this.update}>Update</button> 
-                   
                 </div>
             </div>
         );
     }
 }
-
 
 export default Popup;

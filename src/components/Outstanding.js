@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Emails extends Component {
+class Outstanding extends Component {
 
     render() {
         return (
@@ -12,16 +12,16 @@ class Emails extends Component {
                 <div class="legend"></div>
                 <div class="content">
                     <div class="content-txt">
-                        <h1> {this.props.user.filter(i => i.emailType !=null).length}</h1>
-                        <h2>Emails Sent</h2>
+                        <h1> {this.props.user.filter(i => i.emailType !=="true").length}</h1>
+                        <h2>Outstanding Clients</h2>
                     </div>
                 </div>
                 <div class="image">
-                    <img src="https://cdn.hipwallpaper.com/i/8/34/Buzw4l.jpg"></img>
+                    <img src="https://brickhousecoffee.co/wp-content/uploads/2017/10/3-Reasons-You%E2%80%99re-More-Productive-in-a-Coffee-Shop-feature-image.jpg"></img>
                 </div>
             </div>
         )
     }
 }
 
-export default Emails;
+export default Outstanding;

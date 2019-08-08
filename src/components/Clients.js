@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import Rows from './Rows';
 import Column from './Column';
 
-
-
 class Clients extends Component {
 
     constructor() {
@@ -12,10 +10,8 @@ class Clients extends Component {
             word: " ",
             select: "name",
             showPopup: false
-          
         }
     }
-
 
     handleInput = (e) => {
         let value = e.target.value
@@ -27,13 +23,9 @@ class Clients extends Component {
         await this.setState({ select: value })
     }
 
-   
-
     render() {
         return (
-
             <div>
-
                 <input placeholder="Search" value={this.state.name} onChange={this.handleInput}></input>
                 <select value={this.state.select} onChange={this.handleSelect} >
                     <option value="name">Name</option>
@@ -51,16 +43,9 @@ class Clients extends Component {
                         (i.sold === "true" && this.state.select === "sold") ||
                         (i.owner.includes(this.state.word) && this.state.select === "owner") ||
                         (i.country.includes(this.state.word) && this.state.select === "country")).map(i => <Rows user={i} />)}
-
-                        
-
-          
-     
-
             </div>
         )
     }
 }
-
 
 export default Clients;
