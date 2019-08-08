@@ -17,7 +17,7 @@ class App extends Component {
   }
 
   async getUsers() {
-    return axios.get("/data")
+    return axios.get("http://localhost:9988/data")
   }
 
   async componentDidMount() {

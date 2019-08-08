@@ -22,7 +22,7 @@ class Popup extends Component {
     }
 
     update=async() => {
-        return axios.put("/update", {
+        return axios.put("z/update", {
             name: this.props.text.name,
             country: this.state.country
         })

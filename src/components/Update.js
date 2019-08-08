@@ -27,7 +27,7 @@ class Update extends Component {
     }
 
     transfer = async () => {
-        return axios.put("/transfer", {
+        return axios.put("http://localhost:9988/transfer", {
             name: this.state.name,
             owner: this.state.transferTo
         })
@@ -40,7 +40,7 @@ class Update extends Component {
     }
 
     email = async () => {
-        return axios.put("/email", {
+        return axios.put("http://localhost:9988/email", {
             name: this.state.name,
             email: this.state.email
         })
@@ -54,7 +54,7 @@ class Update extends Component {
 
 
      sale = async () => {
-        return axios.put("/sale", {
+        return axios.put("http://localhost:9988/sale", {
             name: this.state.name,
             sold: "true"
         })

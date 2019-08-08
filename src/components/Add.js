@@ -44,7 +44,7 @@ class Add extends Component {
             country: this.state.country
         }
 
-        return axios.post("/add", user)
+        return axios.post("http://localhost:9988/add", user)
             .then(res => { console.log(res.data) })
     }
 
