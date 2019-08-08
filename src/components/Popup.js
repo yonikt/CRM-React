@@ -41,7 +41,7 @@ class Popup extends Component {
             <div className='popup'>
                 <div className='popup_inner'>
                     <button id="exit" onClick={this.props.closePopup}> x </button> <br></br>
-                    <span>Name:    <input defaultValue={this.props.text.name.split(" ")[0]} onChange={this.handleName}></input></span>
+                    <span>Name:  <input defaultValue={this.props.text.name.split(" ")[0]} onChange={this.handleName}></input></span>
                     <br></br>
                     <span>Surname: <input defaultValue={this.props.text.name.split(" ")[1]}></input></span>
                     <br></br>
