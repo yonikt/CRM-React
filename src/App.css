@@ -8,6 +8,11 @@ body{
   
 }
 
+.fl-table, tbody, table, thead, tr, th{
+  
+  border: none !important;
+}
+
 
 .App {
   text-align: center;

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 
 class Column extends Component {
+  
+
     render() {
         return (
             <div class="fl-table">
@@ -17,6 +19,7 @@ class Column extends Component {
                         </tr>
                     </thead>
                 </table>
+               
             </div>
 
         )

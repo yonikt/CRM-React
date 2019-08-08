@@ -4,9 +4,6 @@ class Emails extends Component {
 
     render() {
         return (
-          
-
-
 
                 <div class="slider">
                 <div class="legend"></div>

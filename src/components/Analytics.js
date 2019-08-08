@@ -4,6 +4,7 @@ import Emails from './Emails';
 import Outstanding from './Outstanding';
 import NewClients from './NewClients';
 
+
 class Analytics extends Component {
   render() {
     return (
@@ -15,6 +16,7 @@ class Analytics extends Component {
             <Emails user={this.props.users} />
             <Outstanding user={this.props.users} />
             <NewClients user={this.props.users} />
+            
           </div>
         </div>
       </div>

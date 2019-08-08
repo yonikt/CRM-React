@@ -3,11 +3,12 @@ const axios = require('axios')
 
 class Popup extends Component {
 
-    constructor() {
-        super()
+    constructor(props) {
+        super(props)
         this.state = {
-            country: "",
-            name: ""
+            country: this.props.text.country,
+            name: this.props.text.name.split(" ")[0] + " " + this.props.text.name.split(" ")[1],
+            sirName: ""
         }
     }
 
@@ -21,12 +22,17 @@ class Popup extends Component {
         await this.setState({ name: value })
     }
 
+    handleSirName = async (e) => {
+        let value = e.target.value
+        await this.setState({ sirName: value })
+    }
+
 
     update = async () => {
         return axios.put("http://localhost:9988/update", {
             _id: this.props.text._id,
-            name: this.state.name + " " + this.props.text.name.split(" ")[1],
-            country: this.state.country
+            name: this.state.name + " " + this.state.sirName,
+            country: this.state.country,
         })
             .then(response => {
                 console.log(response)
@@ -43,7 +49,7 @@ class Popup extends Component {
                     <button id="exit" onClick={this.props.closePopup}> x </button> <br></br>
                     <span>Name:  <input defaultValue={this.props.text.name.split(" ")[0]} onChange={this.handleName}></input></span>
                     <br></br>
-                    <span>Surname: <input defaultValue={this.props.text.name.split(" ")[1]}></input></span>
+                    <span>Surname: <input defaultValue={this.props.text.name.split(" ")[1]} onChange={this.handleSirName}></input></span>
                     <br></br>
                     <span>Country: <input defaultValue={this.props.text.country} onChange={this.handleInput}></input> </span>
                     <br></br>  <button onClick={this.update}>Update</button>
