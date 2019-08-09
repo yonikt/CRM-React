@@ -42,17 +42,22 @@ class Popup extends Component {
             })
     }
 
+    invokeTwoFuncs=()=>{
+        this.update()
+        this.props.closePopup()
+    }
+
     render() {
         return (
             <div className='popup'>
                 <div className='popup_inner'>
-                    <button id="exit" onClick={this.props.closePopup}> x </button> <br></br>
+                    <button id="exit" onClick={this.props.closePopup}> X </button> <br></br>
                     <span>Name:  <input defaultValue={this.props.text.name.split(" ")[0]} onChange={this.handleName}></input></span>
                     <br></br>
                     <span>Surname: <input defaultValue={this.props.text.name.split(" ")[1]} onChange={this.handleSirName}></input></span>
                     <br></br>
                     <span>Country: <input defaultValue={this.props.text.country} onChange={this.handleInput}></input> </span>
-                    <br></br>  <button onClick={this.update}>Update</button>
+                    <br></br>  <button onClick={this.invokeTwoFuncs}>Update</button>
                 </div>
             </div>
         );
