@@ -13,17 +13,12 @@ class NewClients extends Component {
 
         return (
 
-            <div class="slider">
-                <div class="legend"></div>
-                <div class="content">
-                    <div class="content-txt">
+            <div>
                         <h1> {this.props.user.filter(i => i.firstContact.includes("08-19") ).length}</h1>
                         <h2>New {this.getMonth()} Clients</h2>
-                    </div>
-                </div>
-                <div class="image">
-                    <img src="https://ak7.picdn.net/shutterstock/videos/20334007/thumb/9.jpg"></img>
-                </div>
+                        <hr></hr>
+                         <h2>More Analytics</h2>
+              
             </div>
         )
     }

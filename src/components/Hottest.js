@@ -34,17 +34,11 @@ class Hottest extends Component {
              
                
 
-                <div class="slider">
-                <div class="legend"></div>
-                <div class="content">
-                    <div class="content-txt">
-                        <h1>Hottest Country</h1>
-                        <h2> {this.hottestCountry()}</h2>
-                    </div>
-                </div>
-                <div class="image">
-                    <img src="https://pixelz.cc/wp-content/uploads/2017/11/eiffel-tower-at-sunset-paris-france-uhd-4k-wallpaper.jpg"></img>
-                </div>
+                <div>
+                        <h1>{this.hottestCountry()}...</h1>
+                        <h2> Is The Hottest Country </h2>
+                        <hr></hr>
+           
             </div>
 
             
