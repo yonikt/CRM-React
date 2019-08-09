@@ -116,6 +116,31 @@ html, body, .app {
 
 *:focus {outline:none !important}
 
+#next, #previous{
+  border:none;
+  font-size: 2em;
+  color: white;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  background-color: white; 
+  color: black; 
+}
+
+#counting{
+  font-size: 1.35em;
+}
+
+#next:hover, #previous:hover{
+  background-color: #4b4040;
+  color:white;
+}
+
+
 
 .popup {
   position: fixed;
