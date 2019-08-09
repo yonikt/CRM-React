@@ -103,6 +103,9 @@ h1 {
   margin: 0;
   padding: 0;
 }
+
+*:focus {outline:none !important}
+
 html, body, .app {
   margin: 0;
   padding: 0;
@@ -110,6 +113,10 @@ html, body, .app {
   width: 100%;
   height: 100vh;
 }
+
+*:focus {outline:none !important}
+
+
 .popup {
   position: fixed;
   width: 100%;
