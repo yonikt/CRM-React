@@ -8,7 +8,7 @@ class Rows extends Component {
     }
 
     togglePopup() {
-        this.setState({ showPopup: !this.state.showPopup })
+        this.setState({ showPopup:  !this.state.showPopup })
     }
 
     render() {
