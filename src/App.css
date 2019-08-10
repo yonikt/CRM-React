@@ -124,10 +124,9 @@ html, body, .app {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
   margin: 4px 2px;
   transition-duration: 0.4s;
-  background-color: white; 
+  background-color: #ecf0f1; 
   color: black; 
 }
 
@@ -155,10 +154,10 @@ html, body, .app {
 }
 .popup_inner {
   position: absolute;
-  left: 25%;
-  right: 25%;
+  left: 35%;
+  right: 35%;
   top: 25%;
-  bottom: 25%;
+  bottom: 15%;
   margin: auto;
   color:white;
   background: rgb(75, 69, 69);
@@ -316,7 +315,7 @@ input, button, select, option{
   border-radius: 5px;
   margin-top: 8px;
   margin-bottom: 8px;
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50; 
   border: none;
   color: white;
   padding: 6px 12px;
@@ -329,8 +328,6 @@ input, button, select, option{
   background-color: white; 
   color: black; 
   border: 2px solid rgb(0, 0, 0);
-
- 
 }
 
 

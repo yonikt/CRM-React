@@ -40,6 +40,7 @@ class Popup extends Component {
             .catch(err => {
                 console.log(err)
             })
+            
     }
 
     invokeTwoFuncs=()=>{
