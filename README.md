@@ -8,6 +8,12 @@
 
 
 <img src="https://i.imgur.com/ET0LgvS.png" width="700">
+
+## Actions Sections - Adding Clients, Updating and more:
+
 <img src="https://i.imgur.com/jZY0c1Q.png" width="700">
+
+## Analytics Section (using <a href="https://www.npmjs.com/package/recharts"> Recharts</a> Library)
+
 <img src="https://i.imgur.com/dKDudv9.png" width="700">
 
