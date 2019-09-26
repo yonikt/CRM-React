@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
 const axios = require('axios')
 
-class Update extends Component {
+export default  class Update extends Component {
     constructor() {
         super()
-        this.state = {
-            name: "",
-            transferTo: "",
-            email: ""
-        }
+        this.state = { name: "", transferTo: "", email: "" }
     }
 
     handleInput1 = async (e) => {
@@ -93,5 +89,3 @@ class Update extends Component {
         )
     }
 }
-
-export default Update;
