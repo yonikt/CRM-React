@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 const axios = require('axios')
 
-class Popup extends Component {
+export default class Popup extends Component {
 
     constructor(props) {
         super(props)
@@ -12,24 +12,8 @@ class Popup extends Component {
         }
     }
 
-    handleInput = async (e) => {
-        let value = e.target.value
-        await this.setState({ country: value })
-    }
-
-    handleName = async (e) => {
-        let value = e.target.value
-        await this.setState({ name: value })
-    }
-
-    handleSirName = async (e) => {
-        let value = e.target.value
-        await this.setState({ sirName: value })
-    }
-
-
     update = async () => {
-        return axios.put("http://localhost:9988/update", {
+        return axios.put("http://localhost:9988/update", { 
             _id: this.props.text._id,
             name: this.state.name + " " + this.state.sirName,
             country: this.state.country,
@@ -53,16 +37,14 @@ class Popup extends Component {
             <div className='popup'>
                 <div className='popup_inner'>
                     <button id="exit" onClick={this.props.closePopup}> X </button> <br></br>
-                    <span>Name:  <input defaultValue={this.props.text.name.split(" ")[0]} onChange={this.handleName}></input></span>
+                    <span>Name:  <input defaultValue={this.props.text.name.split(" ")[0]} onChange={(e) => this.setState({ name: e.target.value })}></input></span>
                     <br></br>
-                    <span>Surname: <input defaultValue={this.props.text.name.split(" ")[1]} onChange={this.handleSirName}></input></span>
+                    <span>Surname: <input defaultValue={this.props.text.name.split(" ")[1]} onChange={(e) => this.setState({ sirName: e.target.value })}></input></span>
                     <br></br>
-                    <span>Country: <input defaultValue={this.props.text.country} onChange={this.handleInput}></input> </span>
+                    <span>Country: <input defaultValue={this.props.text.country} onChange={(e) => this.setState({ country: e.target.value })}></input> </span>
                     <br></br>  <button onClick={this.invokeTwoFuncs}>Update</button>
                 </div>
             </div>
         );
     }
 }
-
-export default Popup;
