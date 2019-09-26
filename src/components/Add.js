@@ -1,36 +1,11 @@
 import React, { Component } from 'react';
 const axios = require('axios')
 
-class Add extends Component {
+export default class Add extends Component {
 
     constructor() {
         super()
-        this.state = {
-            name: "",
-            surname: "",
-            country: " ",
-            owner: " "
-        }
-    }
-
-    handleInput1 = async (e) => {
-        let value = e.target.value
-        await this.setState({ name: value })
-    }
-
-    handleInput2 = async (e) => {
-        let value = e.target.value
-        await this.setState({ surname: value })
-    }
-
-    handleInput3 = async (e) => {
-        let value = e.target.value
-        await this.setState({ country: value })
-    }
-
-    handleInput4 = async (e) => {
-        let value = e.target.value
-        await this.setState({ owner: value })
+        this.state = { name: "", surname: "", country: " ", owner: " " }
     }
 
     add = async () => {
@@ -43,7 +18,6 @@ class Add extends Component {
             owner: this.state.owner,
             country: this.state.country
         }
-
         return axios.post("http://localhost:9988/add", user)
             .then(res => { console.log(res.data) })
     }
@@ -52,15 +26,12 @@ class Add extends Component {
         return (
             <div>
                 <h4>Add Client</h4>
-                Name: <input value={this.state.name} onChange={this.handleInput1}></input> <br></br>
-                Surname: <input value={this.state.surname} onChange={this.handleInput2}></input> <br></br>
-                Country: <input value={this.state.country} onChange={this.handleInput3}></input> <br></br>
-                Owner: <input value={this.state.owner} onChange={this.handleInput4}></input> <br></br>
+                Name: <input value={this.state.name} onChange={(e) => this.setState({ name: e.target.value })}></input> <br></br>
+                Surname: <input value={this.state.surname} onChange={(e) => this.setState({ surname: e.target.value })}></input> <br></br>
+                Country: <input value={this.state.country} onChange={(e) => this.setState({ country: e.target.value })}></input> <br></br>
+                Owner: <input value={this.state.owner} onChange={(e) => this.setState({ owner: e.target.value })}></input> <br></br>
                 <br></br>  <button onClick={this.add}>Add New Client</button>
             </div>
         );
     }
 }
-
-export default Add;
-
