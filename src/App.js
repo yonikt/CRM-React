@@ -6,8 +6,7 @@ import Actions from './components/Actions';
 import Analytics from './components/Analytics';
 const axios = require('axios')
 
-
-class App extends Component {
+export default class App extends Component {
 
   constructor(props) {
     super(props)
@@ -16,26 +15,15 @@ class App extends Component {
     this.showLess = this.showLess.bind(this)
   }
   
-
-  async getUsers() {
-    return axios.get("http://localhost:9988/data")
-  }
+  async getUsers() { return axios.get("http://localhost:9988/data") }
 
   async componentDidMount() {
     const response = await this.getUsers()
     this.setState({ users: response.data })
   }
 
-  showMore() {
-    this.setState({ rowsToDisplay: this.state.rowsToDisplay + 17 })
-    console.log(this.state.rowsToDisplay)
-  }
-
-  showLess() {
-    if (this.state.rowsToDisplay > 1) {
-      this.setState({ rowsToDisplay: this.state.rowsToDisplay - 17 })
-    }
-  }
+  showMore() { this.setState({ rowsToDisplay: this.state.rowsToDisplay + 17 }) }
+  showLess() {if (this.state.rowsToDisplay > 1) {this.setState({ rowsToDisplay: this.state.rowsToDisplay - 17 }) }}
 
   render() {
     return (
@@ -51,14 +39,8 @@ class App extends Component {
           <Route exact path="/clients" render={() => <Clients showMore={this.showMore} showLess={this.showLess} rowsToDisplay={this.state.rowsToDisplay} data={this.state.users.slice(0, this.state.rowsToDisplay)} allData={this.state.users} />} />
           <Route exact path="/actions" render={() => <Actions users={this.state.users} />} />
           <Route exact path="/analytics" render={() => <Analytics users={this.state.users} />} />
-
         </div>
       </Router>
     )
   }
 }
-
-export default App;
-
-
-
