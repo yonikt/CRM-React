@@ -21,5 +21,5 @@
 
 ## Analytics Section (using <a href="https://www.npmjs.com/package/recharts"> Recharts</a> library)
 
-<img src="https://i.imgur.com/dKDudv9.png" width="700">
+<img src="https://i.imgur.com/oPuUVyW.png" width="700">
 
