@@ -1,4 +1,4 @@
-# CRM
+# CRM Manager
 
 ## Visit Website: https://crm-yoni.herokuapp.com
 
