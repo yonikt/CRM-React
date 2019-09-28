@@ -13,7 +13,7 @@
 ## Dynamic PopUp:
 
 
-<img src="https://i.imgur.com/ET0LgvS.png" width="700">
+<img src="https://i.imgur.com/undefined.png" width="700">
 
 ## Actions Section - Adding Clients, Updating and more:
 
