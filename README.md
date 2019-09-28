@@ -2,7 +2,7 @@
 
 ## Visit Website: https://crm-yoni.herokuapp.com
 
-## Intro PopUp - Getting Started:
+## Getting Started PopUp:
 
 <img src="https://i.imgur.com/pljQj9g.png" width="700">
 
