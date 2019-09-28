@@ -17,7 +17,7 @@
 
 ## Actions Section - Adding Clients, Updating and more:
 
-<img src="https://i.imgur.com/jZY0c1Q.png" width="700">
+<img src="https://i.imgur.com/FSemiy0.png" width="700">
 
 ## Analytics Section (using <a href="https://www.npmjs.com/package/recharts"> Recharts</a> library)
 
