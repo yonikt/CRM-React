@@ -8,7 +8,7 @@
 
 ## Clients Section:
 
-<img src="https://i.imgur.com/Ip4bHoI.png" width="700">
+<img src="https://i.imgur.com/8puczVI.png" width="700">
 
 ## Dynamic PopUp:
 
