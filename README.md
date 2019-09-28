@@ -2,7 +2,7 @@
 
 ## Visit Website: https://crm-yoni.herokuapp.com
 
-## Getting Started PopUp:
+## Getting Started - Pop-Up Guidance:
 
 <img src="https://i.imgur.com/pljQj9g.png" width="700">
 
@@ -10,7 +10,7 @@
 
 <img src="https://i.imgur.com/8puczVI.png" width="700">
 
-## Dynamic PopUp - Update Client's Info In A Click:
+## Dynamic Pop-Up - Update Client's Info In A Click:
 
 
 <img src="https://i.imgur.com/7GFyCZA.png" width="700">
