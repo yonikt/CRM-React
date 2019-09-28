@@ -10,7 +10,7 @@
 
 <img src="https://i.imgur.com/8puczVI.png" width="700">
 
-## Dynamic PopUp:
+## Dynamic PopUp - Update Client's Info In A Click:
 
 
 <img src="https://i.imgur.com/7GFyCZA.png" width="700">
