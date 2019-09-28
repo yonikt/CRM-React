@@ -13,7 +13,7 @@
 ## Dynamic Pop-Up - Update Client's Info In A Click:
 
 
-<img src="https://i.imgur.com/7GFyCZA.png" width="700">
+<img src="https://i.imgur.com/45T8jNQ.png" width="700">
 
 ## Actions Section - Adding Clients, Updating and more:
 
@@ -21,5 +21,5 @@
 
 ## Analytics Section (using <a href="https://www.npmjs.com/package/recharts"> Recharts</a> library)
 
-<img src="https://i.imgur.com/oPuUVyW.png" width="700">
+<img src="https://i.imgur.com/oAFlAbh.png" width="700">
 
